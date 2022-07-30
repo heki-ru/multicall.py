@@ -26,6 +26,7 @@ class Network(IntEnum):
     Aurora = 1313161554
     Optimism = 10
     Oec = 66
+    BscTestnet = 97
 
 MULTICALL_ADDRESSES = {}
 
@@ -44,6 +45,7 @@ MULTICALL2_ADDRESSES = {
     Network.Heco: '0xcA11bde05977b3631167028862bE2a173976CA11',
     Network.Aurora: '0xcA11bde05977b3631167028862bE2a173976CA11',
     Network.Oec: '0xcA11bde05977b3631167028862bE2a173976CA11',
+    Network.BscTestnet: '0xcA11bde05977b3631167028862bE2a173976CA11',
 }
 
 CHAIN_ARBITRUM = "ARBITRUM"
