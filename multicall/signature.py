@@ -1,4 +1,4 @@
-from eth_abi import encode_single, decode_single
+from eth_abi import encode, decode
 from eth_utils import function_signature_to_4byte_selector
 
 
@@ -33,7 +33,7 @@ class Signature:
         self.fourbyte = function_signature_to_4byte_selector(self.function)
 
     def encode_data(self, args=None):
-        return self.fourbyte + encode_single(self.input_types, args) if args else self.fourbyte
+        return self.fourbyte + encode(self.input_types, args) if args else self.fourbyte
 
     def decode_data(self, output):
-        return decode_single(self.output_types, output)
+        return decode(self.output_types, output)
